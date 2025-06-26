@@ -21,7 +21,7 @@ This lab follows a progressive tooling approach designed to maximize learning an
 
 | #  | Module Folder                | What You’ll Build & Learn                                                         |
 |----|------------------------------|----------------------------------------------------------------------------------|
-| 01 | `01-basic-cluster-setup/`    | Create EKS cluster via AWS Console, managed node group, configure kubectl       |
+| 01 | `01-basic-cluster-setup/`    | Create EKS cluster via `eksctl`, managed node group, configure kubectl, deploy and expose first application       |
 | 02 | `02-app-deployment/`         | Deploy a web app, explore Services (ClusterIP, NodePort, LoadBalancer)          |
 | 03 | `03-config-management/`      | Use ConfigMaps, Secrets, env vars, and volume mounts                            |
 
