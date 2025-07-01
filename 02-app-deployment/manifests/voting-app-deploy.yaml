@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voting-app-deploy
+  labels:
+    name: voting-app-deploy
+    app: voting-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: voting-app-pod
+      app: voting-app
+  template:
+    metadata:
+      name: voting-app-pod
+      labels:
+        name: voting-app-pod
+        app: voting-app
+    spec:
+      containers:
+        - name: voting-app
+          image: kodekloud/examplevotingapp_vote:v1
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: 64Mi # 1024 MiB = 1 GiB, so this is 1/16th of a GiB
+              cpu: 50m # 1000m = 1 vCPU, so this is 1/20th of a CPU core
+            limits:
+              memory: 128Mi # 1024 MiB = 1 GiB, so this is 1/8 of a GiB
+              cpu: 100m # 1000m = 1 vCPU, so this is 1/10th of a CPU core

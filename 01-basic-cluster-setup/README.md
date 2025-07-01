@@ -16,11 +16,10 @@ By completing this lab, you will:
 ## Prerequisites
 
 - AWS CLI installed and configured with appropriate permissions
-- eksctl installed (v0.150.0 or later)
-- kubectl installed
+- `eksctl` installed (v0.150.0 or later)
+- `kubectl` installed
 - Basic understanding of Kubernetes concepts (pods, deployments, services)
 - AWS account with EKS, EC2, and VPC permissions
-
 
 ## Architecture Overview
 
